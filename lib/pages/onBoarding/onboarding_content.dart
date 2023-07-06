@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/controllers/on_boarding_page_controller.dart';
 
 import '../../constants/app_dimensions.dart';
+import '../../controllers/on_boarding_page_controller.dart';
 
 class OnBoardingContent extends StatelessWidget {
   OnBoardingContent({

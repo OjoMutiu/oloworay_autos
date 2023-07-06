@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:oloworay_autos_/constants/app_dimensions.dart';
 
+import '../../../../constants/app_dimensions.dart';
 import 'car_details_body.dart';
 import 'car_details_tag.dart';
 

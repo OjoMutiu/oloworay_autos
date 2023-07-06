@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/controllers/reset_password_controller.dart';
 
 import '../../../constants/app_dimensions.dart';
 import '../../../constants/app_strings.dart';
+import '../../../controllers/reset_password_controller.dart';
 import '../../../widgets/password_form_error.dart';
 import '../../../widgets/text_form_field.dart';
 

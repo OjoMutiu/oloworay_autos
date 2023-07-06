@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:oloworay_autos_/constants/app_colors.dart';
 
+import '../../../../constants/app_colors.dart';
 import '../../../../constants/app_dimensions.dart';
 
 class OtpForm extends StatefulWidget {

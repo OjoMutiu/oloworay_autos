@@ -1,9 +1,9 @@
 import 'package:fl_country_code_picker/fl_country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/constants/app_routes.dart';
 
 import '../constants/app_colors.dart';
+import '../constants/app_routes.dart';
 import '../constants/app_strings.dart';
 
 class UserSignUpFormController extends GetxController {

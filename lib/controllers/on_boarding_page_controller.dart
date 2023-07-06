@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/constants/app_routes.dart';
 
+import '../constants/app_routes.dart';
 import '../constants/app_strings.dart';
 import '../models/onboarding_content_model.dart';
 

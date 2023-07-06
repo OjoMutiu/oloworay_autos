@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:oloworay_autos_/constants/app_dimensions.dart';
 
 import '../constants/app_colors.dart';
+import '../constants/app_dimensions.dart';
 
 class DefaultOutlinedButton extends StatelessWidget {
   const DefaultOutlinedButton({

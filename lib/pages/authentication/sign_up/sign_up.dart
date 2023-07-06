@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:oloworay_autos_/constants/app_dimensions.dart';
-import 'package:oloworay_autos_/pages/authentication/sign_up/sign_up_body.dart';
+import 'package:oloworay_autos/pages/authentication/sign_up/sign_up_body.dart';
 
+import '../../../constants/app_dimensions.dart';
 import '../../../constants/app_strings.dart';
 import '../../../controllers/sign_up_controller.dart';
 
@@ -25,6 +25,6 @@ class SignUpPage extends StatelessWidget {
                     icon: SvgPicture.asset(backArrow, width: AppDimension.height20,
                       height: AppDimension.height20,
                     ))),
-            body: const Body()));
+            body: const SignUpBody()));
   }
 }

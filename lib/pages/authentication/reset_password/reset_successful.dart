@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:oloworay_autos_/constants/app_colors.dart';
-import 'package:oloworay_autos_/widgets/default_elevated_button.dart';
 
+import '../../../constants/app_colors.dart';
 import '../../../constants/app_dimensions.dart';
 import '../../../constants/app_strings.dart';
+import '../../../widgets/default_elevated_button.dart';
 
 class PasswordResetSuccessful extends StatelessWidget {
   const PasswordResetSuccessful({Key? key}) : super(key: key);
@@ -14,16 +14,16 @@ class PasswordResetSuccessful extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          appBar: AppBar(
-              elevation: 0,
-              backgroundColor: Colors.white,
-              leading: IconButton(
-                  onPressed: () {
-                    Get.back();
-                  },
-                  icon: SvgPicture.asset(backArrow, width: AppDimension.height20,
-                    height: AppDimension.height20,
-                  ))),
+          // appBar: AppBar(
+          //     elevation: 0,
+          //     backgroundColor: Colors.white,
+          //     leading: IconButton(
+          //         onPressed: () {
+          //           Get.back();
+          //         },
+          //         icon: SvgPicture.asset(backArrow, width: AppDimension.height20,
+          //           height: AppDimension.height20,
+          //         ))),
           body: Center(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: AppDimension.getProportionateScreenWidth(55.0)),

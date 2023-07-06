@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/controllers/on_boarding_page_controller.dart';
 
 import '../../constants/app_colors.dart';
 import '../../constants/app_dimensions.dart';
+import '../../controllers/on_boarding_page_controller.dart';
 
 AnimatedContainer buildDot({required int index}) {
   OnBoardingPageController controller = Get.find();

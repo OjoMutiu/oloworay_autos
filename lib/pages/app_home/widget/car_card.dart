@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:oloworay_autos_/constants/app_colors.dart';
-import 'package:oloworay_autos_/constants/app_dimensions.dart';
 
+
+import '../../../constants/app_colors.dart';
+import '../../../constants/app_dimensions.dart';
 import 'car_tags.dart';
-
 
 
 class CarCad extends StatefulWidget {

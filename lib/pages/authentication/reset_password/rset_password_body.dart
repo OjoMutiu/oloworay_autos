@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/constants/app_dimensions.dart';
-import 'package:oloworay_autos_/controllers/reset_password_controller.dart';
-import 'package:oloworay_autos_/pages/authentication/reset_password/reset_password_form.dart';
-import 'package:oloworay_autos_/widgets/auth_page_header_section.dart';
-import 'package:oloworay_autos_/widgets/default_elevated_button.dart';
+import 'package:oloworay_autos/pages/authentication/reset_password/reset_password_form.dart';
 
-
+import '../../../constants/app_dimensions.dart';
 import '../../../constants/app_strings.dart';
+import '../../../controllers/reset_password_controller.dart';
+import '../../../widgets/auth_page_header_section.dart';
+import '../../../widgets/default_elevated_button.dart';
 
 class ResetPasswordBody extends StatelessWidget {
   const ResetPasswordBody({Key? key}) : super(key: key);

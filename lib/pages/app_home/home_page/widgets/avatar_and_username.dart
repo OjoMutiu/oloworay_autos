@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/constants/app_dimensions.dart';
-import 'package:oloworay_autos_/controllers/sign_up_controller.dart';
 
 import '../../../../constants/app_colors.dart';
+import '../../../../constants/app_dimensions.dart';
 import '../../../../constants/app_strings.dart';
 import '../../../../controllers/main_homepage_controller.dart';
+import '../../../../controllers/sign_up_controller.dart';
 import '../../widget/icon_with_counter.dart';
 
 

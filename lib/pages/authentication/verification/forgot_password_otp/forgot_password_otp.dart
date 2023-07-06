@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:oloworay_autos_/pages/authentication/verification/forgot_password_otp/forgot_password_otp_body.dart';
 
 import '../../../../constants/app_dimensions.dart';
 import '../../../../constants/app_strings.dart';
+import 'forgot_password_otp_body.dart';
 
 
 class ForgotPasswordOTP extends StatelessWidget {
@@ -26,7 +26,7 @@ class ForgotPasswordOTP extends StatelessWidget {
             ),
           )
       ),
-      body: ForgotPasswordOtpBody(),//const OtpBody(),
+      body: const ForgotPasswordOtpBody(),//const OtpBody(),
     ));
   }
 }

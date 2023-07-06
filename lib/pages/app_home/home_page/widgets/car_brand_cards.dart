@@ -21,14 +21,14 @@ class CarFilterCard extends StatelessWidget {
         children: [
           Container(
             width: AppDimension.width48,
-            height: AppDimension.getProportionateScreenHeight(60),
+            height: AppDimension.getProportionateScreenHeight(48),
             decoration: BoxDecoration(
                 border: Border.all(
                   color: AppColors.neutral300,
                   width:AppDimension.width1,
                 ),
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(AppDimension.height40)),
+                borderRadius: BorderRadius.circular(AppDimension.height48)),
             child: Container(
               padding: EdgeInsets.symmetric(
                 vertical: AppDimension.height8,

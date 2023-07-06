@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/constants/app_routes.dart';
-import 'package:oloworay_autos_/widgets/default_elevated_button.dart';
 
 import '../../../../constants/app_dimensions.dart';
+import '../../../../constants/app_routes.dart';
 import '../../../../constants/app_strings.dart';
 import '../../../../controllers/sign_up_controller.dart';
+import '../../../../widgets/default_elevated_button.dart';
 import '../../../../widgets/row_text_textButton.dart';
 import 'otp_form.dart';
 

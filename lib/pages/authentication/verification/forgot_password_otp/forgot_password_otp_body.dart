@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/constants/app_routes.dart';
-import 'package:oloworay_autos_/pages/authentication/verification/forgot_password_otp/forgot_password_otp_form.dart';
-import 'package:oloworay_autos_/widgets/default_elevated_button.dart';
 
 import '../../../../constants/app_dimensions.dart';
+import '../../../../constants/app_routes.dart';
 import '../../../../constants/app_strings.dart';
+import '../../../../widgets/default_elevated_button.dart';
 import '../../../../widgets/row_text_textButton.dart';
+import 'forgot_password_otp_form.dart';
 
 class ForgotPasswordOtpBody extends StatelessWidget {
   const ForgotPasswordOtpBody({super.key,});
@@ -42,7 +42,7 @@ class ForgotPasswordOtpBody extends StatelessWidget {
           ),
           SizedBox(height: AppDimension.getProportionateScreenHeight(40.0)),
           const ForgotPasswordOtpForm(),
-          const Spacer(flex: 1,),
+          const Spacer(flex: 5,),
           // SizedBox(height: AppDimension.getProportionateScreenHeight(250.0)),
           RowTextButton(
             tap: () {
@@ -59,7 +59,7 @@ class ForgotPasswordOtpBody extends StatelessWidget {
             bText: bSubmit,
             bIcon: forwardArrow,
           ),
-          const Spacer(flex: 5,),
+          const Spacer(flex: 1,),
         ]));
   }
 }

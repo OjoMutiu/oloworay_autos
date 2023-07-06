@@ -1,14 +1,13 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/constants/app_dimensions.dart';
-import 'package:oloworay_autos_/pages/app_home/home_page/widgets/avatar_and_username.dart';
-import 'package:oloworay_autos_/pages/app_home/home_page/widgets/car_brands.dart';
-import 'package:oloworay_autos_/pages/app_home/home_page/widgets/page_banner.dart';
-import 'package:oloworay_autos_/pages/app_home/home_page/widgets/serach_box_and_filter.dart';
-import 'package:oloworay_autos_/pages/app_home/home_page/widgets/switch_button.dart';
+import 'package:oloworay_autos/pages/app_home/home_page/widgets/avatar_and_username.dart';
+import 'package:oloworay_autos/pages/app_home/home_page/widgets/car_brands.dart';
+import 'package:oloworay_autos/pages/app_home/home_page/widgets/page_banner.dart';
+import 'package:oloworay_autos/pages/app_home/home_page/widgets/serach_box_and_filter.dart';
+import 'package:oloworay_autos/pages/app_home/home_page/widgets/switch_button.dart';
 
+import '../../../constants/app_dimensions.dart';
 import '../../../models/car_model.dart';
 import '../car_details_page/car_details.dart';
 import '../widget/car_card.dart';
@@ -29,8 +28,7 @@ class _HomePageBodyState extends State<HomePageBody> {
     Random random = Random();
     int index1 = random.nextInt(demoTopChoiceCars.length);
     int index2 = random.nextInt(demoTopChoiceCars.length);
-    int index3 = random.nextInt(demoOloworayAutosCars.length);
-    int index4 = random.nextInt(demoExploreCars.length);
+
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(

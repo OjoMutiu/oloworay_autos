@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/controllers/sign_up_controller.dart';
-import 'package:oloworay_autos_/pages/authentication/sign_up/phone_number_field.dart';
+import 'package:oloworay_autos/pages/authentication/sign_up/phone_number_field.dart';
 
 import '../../../constants/app_dimensions.dart';
 import '../../../constants/app_strings.dart';
+import '../../../controllers/sign_up_controller.dart';
 import '../../../widgets/form_error.dart';
 import '../../../widgets/password_form_error.dart';
 import '../../../widgets/text_form_field.dart';

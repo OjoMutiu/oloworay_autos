@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:oloworay_autos_/widgets/text_form_field_header.dart';
+import 'package:oloworay_autos/widgets/text_form_field_header.dart';
 
 import '../constants/app_colors.dart';
 import '../constants/app_dimensions.dart';

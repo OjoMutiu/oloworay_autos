@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:oloworay_autos_/constants/app_strings.dart';
-import 'package:oloworay_autos_/controllers/sign_up_controller.dart';
-import 'package:oloworay_autos_/widgets/text_form_field_header.dart';
 
 import '../../../constants/app_colors.dart';
 import '../../../constants/app_dimensions.dart';
+import '../../../constants/app_strings.dart';
+import '../../../controllers/sign_up_controller.dart';
+import '../../../widgets/text_form_field_header.dart';
 
 class AppPhoneTextField extends StatefulWidget {
   const AppPhoneTextField({

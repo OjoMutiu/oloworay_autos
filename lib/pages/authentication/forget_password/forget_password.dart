@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:oloworay_autos_/pages/authentication/forget_password/forget_password_body.dart';
 
 import '../../../constants/app_dimensions.dart';
 import '../../../constants/app_strings.dart';
 import '../../../controllers/forget_password_controller.dart';
+import 'forget_password_body.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({Key? key}) : super(key: key);
@@ -25,6 +25,6 @@ class ForgotPassword extends StatelessWidget {
                     icon: SvgPicture.asset(backArrow, width: AppDimension.height20,
                       height: AppDimension.height20,
                     ))),
-            body: const Body()));
+            body: const ForgetPasswordBody()));
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:oloworay_autos_/pages/app_home/car_details_page/widgets/buttom_nav_bar.dart';
-import 'package:oloworay_autos_/pages/app_home/car_details_page/widgets/car_details_body.dart';
+import 'package:oloworay_autos/pages/app_home/car_details_page/widgets/buttom_nav_bar.dart';
+import 'package:oloworay_autos/pages/app_home/car_details_page/widgets/car_details_body.dart';
 
 import '../../../models/car_model.dart';
 

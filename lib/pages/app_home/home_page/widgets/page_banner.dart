@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/controllers/main_homepage_controller.dart';
-import 'package:oloworay_autos_/pages/app_home/home_page/widgets/page_banner_item.dart';
+import 'package:oloworay_autos/pages/app_home/home_page/widgets/page_banner_item.dart';
 
 import '../../../../constants/app_dimensions.dart';
+import '../../../../controllers/main_homepage_controller.dart';
 
 class PageBanner extends StatelessWidget {
   const PageBanner({

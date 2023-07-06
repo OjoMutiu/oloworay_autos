@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:oloworay_autos_/constants/app_colors.dart';
-import 'package:oloworay_autos_/constants/app_dimensions.dart';
-import 'package:oloworay_autos_/pages/app_home/widget/car_tags.dart';
 
+import '../../../../constants/app_colors.dart';
+import '../../../../constants/app_dimensions.dart';
 import '../../../../constants/app_strings.dart';
 import '../../../../models/car_model.dart';
 import '../../widget/car_card.dart';
+import '../../widget/car_tags.dart';
 import '../../widget/section_header.dart';
 import 'car_details_placard.dart';
 
@@ -346,6 +346,7 @@ class _CarDetailsBodyState extends State<CarDetailsBody> {
                       ],
                     ),
                   ),
+                  SizedBox(height: AppDimension.height20),
                 ],
               ),
             ),
