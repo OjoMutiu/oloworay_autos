@@ -10,12 +10,14 @@ import '../pages/authentication/sign_in/sign_in.dart';
 import '../pages/authentication/sign_up/sign_up.dart';
 import '../pages/authentication/verification/forgot_password_otp/forgot_password_otp.dart';
 import '../pages/authentication/verification/sign_up_otp/otp.dart';
+import '../pages/message/available_users.dart';
 import '../pages/onBoarding/onboarding_page.dart';
 import '../pages/splash/splash_screen.dart';
 
 class Routes {
   static String onBoardingPage = '/onBoardingPage';
   static String splashScreen = '/';
+
   static String signUpPage = '/signUpPage';
   static String signInPage = '/signInPage';
   static String otp ='/OTP';
@@ -23,8 +25,11 @@ class Routes {
   static String forgetPasswordOtp = '/forgetPasswordOtp';
   static String resetPassword = '/resetPassword';
   static String resetSuccessful = '/resetSuccessful';
+
   static String myHomeScreen = '/myHomeScreen';
   static String filterPage = '/filterPage';
+
+  static String availableUsers = '/availableUsers';
 
 }
 
@@ -62,5 +67,5 @@ final getPages = [
   GetPage(name: Routes.filterPage,
     page: () => const FilterPage(),
   ),
-
+  GetPage(name: Routes.availableUsers, page: () => const AvailableUsers())
 ];

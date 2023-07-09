@@ -10,6 +10,10 @@ class HomePageController extends GetxController{
   final RxInt _numberOfItems = 4.obs;
   int get numberOfItems => _numberOfItems.value;
 
+  //Bottom nav fields
+  var currentIndex = 0.obs;
+  var showBottomSheet = false.obs;
+
   //Page Banner Controller
   var pageBannerItems = <PageBannerItem>[].obs;
   late PageController controller;
@@ -35,4 +39,10 @@ class HomePageController extends GetxController{
     ];
     pageBannerItems.value = dataResult;
   }
+
+  //bottom nav tab index changing
+  void onItemTap(int index){
+    currentIndex.value = index;
+  }
+
 }

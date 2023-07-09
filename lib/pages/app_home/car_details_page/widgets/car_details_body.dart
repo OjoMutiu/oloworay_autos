@@ -50,44 +50,46 @@ class _CarDetailsBodyState extends State<CarDetailsBody> {
               Positioned(
                 top: AppDimension.height10,
                 left: AppDimension.width20,
-                child: CircleAvatar(
-                  backgroundColor: AppColors.neutral200,
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        left: AppDimension.width4),
-                    child: IconButton(
-                      icon: Icon(
-                        Icons.arrow_back_ios,
-                        size: AppDimension.width20,
-                        color: AppColors.primary500,
-                      ),
-                      onPressed: () {
-                        Get.back();
-                      },
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                top: AppDimension.height14,
                 right: AppDimension.width20,
-                child: Container(
-                  padding:
-                  EdgeInsets.all(AppDimension.height4),
-                  width: AppDimension.getProportionateScreenWidth(32),
-                  height: AppDimension.getProportionateScreenHeight(32),
-                  decoration: BoxDecoration(
-                      color: AppColors.carTagColor,
-                      borderRadius: BorderRadius.circular(AppDimension.height6)),
-                  child: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        // isFavTap = !isFavTap;
-                      });
-                    },
-                    child: //!isFavTap? SvgPicture.asset('assets/icons/favourite.svg'):
-                    SvgPicture.asset('assets/icons/fav_colored.svg'),
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: AppColors.neutral200,
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                            left: AppDimension.width4),
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.arrow_back_ios,
+                            size: AppDimension.width20,
+                            color: AppColors.primary500,
+                          ),
+                          onPressed: () {
+                            Get.back();
+                          },
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding:
+                      EdgeInsets.all(AppDimension.height4),
+                      width: AppDimension.getProportionateScreenWidth(32),
+                      height: AppDimension.getProportionateScreenHeight(32),
+                      decoration: BoxDecoration(
+                          color: AppColors.carTagColor,
+                          borderRadius: BorderRadius.circular(AppDimension.height6)),
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            // isFavTap = !isFavTap;
+                          });
+                        },
+                        child: //!isFavTap? SvgPicture.asset('assets/icons/favourite.svg'):
+                        SvgPicture.asset('assets/icons/fav_colored.svg'),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ]),

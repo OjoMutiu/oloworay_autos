@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos/pages/onBoarding/onboarding_page.dart';
+import 'package:oloworay_autos/pages/app_home/home.dart';
 
 import 'constants/app_routes.dart';
 import 'constants/theme/theme.dart';
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       getPages: getPages,
       theme: AppTheme.lightTheme,
-      //home: OnBoardingPage(),
+      home: const MyHomeScreen(),
     );
   }
 }

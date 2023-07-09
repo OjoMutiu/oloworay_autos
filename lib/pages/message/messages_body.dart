@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:oloworay_autos_/constants/app_colors.dart';
-import 'package:oloworay_autos_/constants/app_dimensions.dart';
-import 'package:oloworay_autos_/constants/app_strings.dart';
-import 'package:oloworay_autos_/widgets/default_elevated_button.dart';
+
+import '../../constants/app_colors.dart';
+import '../../constants/app_dimensions.dart';
 
 class MessagesBody extends StatefulWidget {
   const MessagesBody({super.key});
@@ -33,6 +31,7 @@ class _MessagesBodyState extends State<MessagesBody> {
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 fontSize: AppDimension.font14, color: AppColors.black100),
           ),
+          SizedBox(height: AppDimension.height4),
           Text(
             'Hmm, looks like there are no new messages',
             style: Theme.of(context).textTheme.titleMedium?.copyWith(

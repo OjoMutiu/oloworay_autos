@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:oloworay_autos/controllers/message_controller.dart';
 import 'package:oloworay_autos/controllers/sign_in_controller.dart';
 import 'package:oloworay_autos/controllers/sign_up_controller.dart';
 import 'package:oloworay_autos/controllers/splash_controller.dart';
@@ -15,6 +16,7 @@ class AllControllerBinding implements Bindings{
     Get.put<UserSignInFormController>(UserSignInFormController());
     Get.put<UserSignUpFormController>(UserSignUpFormController());
     Get.put<HomePageController>(HomePageController());
+    Get.put<MessageController>(MessageController());
   }
 
 }

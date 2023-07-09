@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos_/constants/app_colors.dart';
-import 'package:oloworay_autos_/constants/app_dimensions.dart';
-import 'package:oloworay_autos_/controllers/message_controller.dart';
+import 'package:oloworay_autos/constants/app_routes.dart';
+import 'package:oloworay_autos/widgets/default_elevated_button.dart';
 
+import '../../constants/app_colors.dart';
+import '../../constants/app_dimensions.dart';
+import '../../constants/app_strings.dart';
 import '../../controllers/main_homepage_controller.dart';
+import '../../controllers/message_controller.dart';
 import 'messages_body.dart';
 
 class Messages extends StatefulWidget {
@@ -48,19 +52,65 @@ class _MessagesState extends State<Messages> {
           backgroundColor: Colors.white,
         ),
         body: const MessagesBody(),
+
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: AppColors.primary500,
+          onPressed: () {
+            Get.toNamed(Routes.availableUsers);
+          },
+          child: Padding(
+            padding: EdgeInsets.all(AppDimension.height8),
+            child: const Icon(Icons.message_rounded, color: Colors.white,),
+          ),
+        ),
       ),
-      // Get.find<MyController>().isFirstVisit = false
     );
   }
 
 
 void _buildBottomSheet() async {
   return showModalBottomSheet(
+    shape: RoundedRectangleBorder(
+      borderRadius:BorderRadius.only(
+          topRight: Radius.circular(AppDimension.height20),
+          topLeft: Radius.circular(AppDimension.height20)
+      )
+    ),
       context: context,
       builder: (context) {
         return Container(
-          color: Colors.blue,
-          child: const Text('Hey'),
+          padding: EdgeInsets.only(top: AppDimension.getProportionateScreenHeight(78),
+              left: AppDimension.getProportionateScreenWidth(33),
+              right: AppDimension.getProportionateScreenWidth(33)),
+          height: AppDimension.getProportionateScreenHeight(400),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(AppDimension.height20),
+              topLeft: Radius.circular(AppDimension.height20)
+            )
+          ),
+          child: Center(
+            child: Column(
+              children: [
+                SvgPicture.asset('assets/icons/warning.svg'),
+                SizedBox(height: AppDimension.height24),
+                Text('1. Meeting up? Select public places '
+                    '\n 2. Do not make payment in advance without car inspection',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppColors.black100,
+                    fontSize: AppDimension.font14
+                  ),),
+                SizedBox(height: AppDimension.height24),
+                DefaultElevatedButton(
+                    width: AppDimension.getProportionateScreenWidth(157),
+                    bText: bContinue, press: (){
+                  Get.back();
+                })
+              ],
+            ),
+          ),
         );
       });
 }
