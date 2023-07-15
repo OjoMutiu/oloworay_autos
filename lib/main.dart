@@ -7,7 +7,7 @@ import 'constants/theme/theme.dart';
 import 'controllers/all_controller_binding.dart';
 
 void main() {
-
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       initialBinding: AllControllerBinding(),
-      initialRoute: '/',
+      //initialRoute: '/',
       getPages: getPages,
       theme: AppTheme.lightTheme,
       home: const MyHomeScreen(),

@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-
+import 'package:oloworay_autos/pages/message/chat_room.dart';
 
 import '../pages/app_home/filter/filter_page.dart';
 import '../pages/app_home/home.dart';
@@ -20,7 +20,7 @@ class Routes {
 
   static String signUpPage = '/signUpPage';
   static String signInPage = '/signInPage';
-  static String otp ='/OTP';
+  static String otp = '/OTP';
   static String forgetPassword = '/forgetPassword';
   static String forgetPasswordOtp = '/forgetPasswordOtp';
   static String resetPassword = '/resetPassword';
@@ -30,42 +30,54 @@ class Routes {
   static String filterPage = '/filterPage';
 
   static String availableUsers = '/availableUsers';
-
+  static String chatPage = '/chatPage';
 }
 
-final getPages = [
-  GetPage(name: Routes.onBoardingPage,
+final List<GetPage> getPages = [
+  GetPage(
+    name: Routes.onBoardingPage,
     page: () => OnBoardingPage(),
   ),
-  GetPage(name: Routes.splashScreen,
+  GetPage(
+    name: Routes.splashScreen,
     page: () => MySplashscreen(),
   ),
-  GetPage(name: Routes.signUpPage,
+  GetPage(
+    name: Routes.signUpPage,
     page: () => const SignUpPage(),
   ),
-  GetPage(name: Routes.signInPage,
+  GetPage(
+    name: Routes.signInPage,
     page: () => const SignInPage(),
   ),
-  GetPage(name: Routes.otp,
+  GetPage(
+    name: Routes.otp,
     page: () => const OTP(),
   ),
-  GetPage(name: Routes.forgetPassword,
+  GetPage(
+    name: Routes.forgetPassword,
     page: () => const ForgotPassword(),
   ),
-  GetPage(name: Routes.forgetPasswordOtp,
+  GetPage(
+    name: Routes.forgetPasswordOtp,
     page: () => const ForgotPasswordOTP(),
   ),
-  GetPage(name: Routes.resetPassword,
+  GetPage(
+    name: Routes.resetPassword,
     page: () => const ResetPassword(),
   ),
-  GetPage(name: Routes.resetSuccessful,
+  GetPage(
+    name: Routes.resetSuccessful,
     page: () => const PasswordResetSuccessful(),
   ),
-  GetPage(name: Routes.myHomeScreen,
+  GetPage(
+    name: Routes.myHomeScreen,
     page: () => const MyHomeScreen(),
   ),
-  GetPage(name: Routes.filterPage,
+  GetPage(
+    name: Routes.filterPage,
     page: () => const FilterPage(),
   ),
-  GetPage(name: Routes.availableUsers, page: () => const AvailableUsers())
+  GetPage(name: Routes.availableUsers, page: () => const AvailableUsers()),
+  GetPage(name: Routes.chatPage, page: () => const ChatRoom())
 ];

@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 
+import '../models/message_model.dart';
 import '../models/message_user_model.dart';
 
 class MessageController extends GetxController{
@@ -18,10 +19,14 @@ class MessageController extends GetxController{
   //List of already messaged dealers/users
   var allMessagedUsers =<MessagedUsers>[].obs;
 
+  //Demo messages
+  var userMessages = <Message>[].obs;
+
   @override
   void onInit() {
     super.onInit();
     fetchAllMessagedUsers();
+    fetchUserMessages();
   }
 
   void fetchAllMessagedUsers() async{
@@ -69,5 +74,103 @@ class MessageController extends GetxController{
     ];
 
     allMessagedUsers.value = fetchedData;
+  }
+
+  void fetchUserMessages() async{
+    var userMessagesData = [
+      Message(
+          textMessage: 'Hey Whatsup',
+          senderId: 'user1',
+          senderUserName: 'sender1',
+          receiverId: 'user2',
+          timeStamp: DateTime.now().subtract(Duration(days: 5)),
+          isSentByMe: true),
+      Message(
+          textMessage: 'Hey I\'m good, you?',
+          senderId: 'user2',
+          senderUserName: 'sender2',
+          receiverId: 'user1',
+          timeStamp: DateTime.now().subtract(Duration(days: 5)),
+          isSentByMe: false),
+      Message(
+          textMessage: 'Boss, I want to get a new car',
+          senderId: 'user1',
+          senderUserName: 'sender1',
+          receiverId: 'user2',
+          timeStamp: DateTime.now().subtract(Duration(days: 3)),
+          isSentByMe: true),
+      Message(
+          textMessage: 'You deal all states?',
+          senderId: 'user1',
+          senderUserName: 'sender1',
+          receiverId: 'user2',
+          timeStamp: DateTime.now().subtract(Duration(days: 3)),
+          isSentByMe: true),
+      Message(
+          textMessage: 'Yeah, sure. What\'s your taste?\n What bran do you have in mind?',
+          senderId: 'user2',
+          senderUserName: 'sender2',
+          receiverId: 'user1',
+          timeStamp: DateTime.now().subtract(Duration(days: 3)),
+          isSentByMe: false),
+      Message(
+          textMessage: 'Hmmm, I\'m thinking of getting a Lambo this time',
+          senderId: 'user1',
+          senderUserName: 'sender1',
+          receiverId: 'user2',
+          timeStamp: DateTime.now().subtract(Duration(days: 3)),
+          isSentByMe: true),
+      Message(
+          textMessage: 'Sure, we\'ve got all varieties of vehicles here',
+          senderId: 'user2',
+          senderUserName: 'sender2',
+          receiverId: 'user1',
+          timeStamp: DateTime.now().subtract(Duration(days: 2)),
+          isSentByMe: false),
+      Message(
+          textMessage: 'Sport or Luxury or a combo',
+          senderId: 'user2',
+          senderUserName: 'sender2',
+          receiverId: 'user1',
+          timeStamp: DateTime.now().subtract(Duration(days: 2)),
+          isSentByMe: false),
+      Message(
+          textMessage: 'Let me get a combo, and I also want a Maybach',
+          senderId: 'user1',
+          senderUserName: 'sender1',
+          receiverId: 'user2',
+          timeStamp: DateTime.now().subtract(Duration(days: 1)),
+          isSentByMe: true),
+      Message(
+          textMessage: 'Alright, here are some new arrivals:',
+          senderId: 'user2',
+          senderUserName: 'sender2',
+          receiverId: 'user1',
+          timeStamp: DateTime.now().subtract(Duration(days: 1)),
+          isSentByMe: false),
+      Message(
+          textMessage: 'Cool, so cool',
+          senderId: 'user1',
+          senderUserName: 'sender1',
+          receiverId: 'user2',
+          timeStamp: DateTime.now().subtract(Duration(hours: 3)),
+          isSentByMe: true),
+      Message(
+          textMessage: 'You like them',
+          senderId: 'user2',
+          senderUserName: 'sender2',
+          receiverId: 'user1',
+          timeStamp: DateTime.now().subtract(Duration(hours: 1)),
+          isSentByMe: false),
+      Message(
+          textMessage: 'Sure, I\'m def getting both',
+          senderId: 'user1',
+          senderUserName: 'sender1',
+          receiverId: 'user2',
+          timeStamp: DateTime.now().subtract(Duration(hours: 1)),
+          isSentByMe: true),
+    ].reversed.toList();
+
+    userMessages.value = userMessagesData;
   }
 }

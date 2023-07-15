@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:oloworay_autos/constants/app_routes.dart';
 import 'package:oloworay_autos/controllers/message_controller.dart';
 
 import '../../constants/app_colors.dart';
@@ -41,7 +42,6 @@ class AvailableUsers extends StatelessWidget {
               itemCount: controller.allMessagedUsers.length,
               itemBuilder: (context, index) {
                 String lastUserMessage = '';
-
                 if (controller.allMessagedUsers[index].lastMessage.length >
                     AppDimension.getProportionateScreenWidth(25)) {
                   lastUserMessage =
@@ -53,7 +53,7 @@ class AvailableUsers extends StatelessWidget {
 
                 return GestureDetector(
                   onTap: () {
-                    //Todo: Navigate users to CHatPage on tap
+                    Get.toNamed(Routes.chatPage);
                   },
                   child: Container(
                       color: Colors.white,

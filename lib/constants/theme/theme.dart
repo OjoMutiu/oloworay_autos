@@ -6,6 +6,20 @@ class AppTheme {
   AppTheme._();
 
   static ThemeData lightTheme = ThemeData(
+      primarySwatch: const MaterialColor(
+          0xFF2D7276,
+          <int, Color>{
+            50: Color(0xFFf2fafa),
+            100: Color(0xFFE4F4F4),
+            200: Color(0xFFBAD9DB),
+            300: Color(0xFF86BCC0),
+            400: Color(0xFF559CA0),
+            500: Color(0xFF2D7276),
+            600: Color(0xFF0B4D51),
+            700: Color(0xFF073335),
+            800: Color(0xFF062729),
+            900: Color(0xFF020f10)
+      }),
       textTheme: lightTextTheme,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(

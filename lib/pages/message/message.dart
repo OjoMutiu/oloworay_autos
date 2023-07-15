@@ -38,6 +38,7 @@ class _MessagesState extends State<Messages> {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
+          centerTitle: true,
           title: Center(
             child: Text(
               'Message',
