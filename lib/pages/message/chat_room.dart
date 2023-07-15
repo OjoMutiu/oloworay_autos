@@ -76,16 +76,23 @@ class ChatRoom extends StatelessWidget {
               children: [
                 Image.asset('assets/images/home/image10.png'),
                 Text(
-                  'Brand of Car ' + ' Price of the car',
-                  style: TextStyle(
-                    color: AppColors.black60,
-                    fontSize: AppDimension.font12,
-                    fontWeight: FontWeight.w400,
+                  '2020 Toyota Camry white',
+                  style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                    color: AppColors.black100,
+                    fontSize: AppDimension.font16,
+                  ),
+                ),
+                Text(
+                  'N10M',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    color: AppColors.black100,
+                    fontSize: AppDimension.font16,
                   ),
                 )
               ],
             ),
           ),
+          SizedBox(height: 10),
           Expanded(
               child: ListView.builder(
             reverse: true,
@@ -112,7 +119,12 @@ class ChatRoom extends StatelessWidget {
                         borderRadius:
                             BorderRadius.circular(AppDimension.height6)),
                     child:
-                        Text(messageController.userMessages[index].textMessage),
+                        Text(messageController.userMessages[index].textMessage,
+                          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: AppColors.black100,
+                            fontSize: AppDimension.font14
+                          ),
+                        ),
                   ),
                 ),
               );
