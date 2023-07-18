@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:oloworay_autos/pages/app_home/home.dart';
-import 'package:oloworay_autos/pages/message/message.dart';
 
 import 'constants/app_routes.dart';
 import 'constants/theme/theme.dart';

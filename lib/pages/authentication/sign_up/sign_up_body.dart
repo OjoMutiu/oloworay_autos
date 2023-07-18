@@ -25,6 +25,7 @@ class _SignUpBodyState extends State<SignUpBody> {
     //_controller.countries = CountryCode.getAllCountries();
     return SingleChildScrollView(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: EdgeInsets.symmetric(
@@ -44,6 +45,7 @@ class _SignUpBodyState extends State<SignUpBody> {
           //Todo: render flow error
           Row(
             children: [
+              Spacer(),
               Obx(() {
                 return Checkbox(
                   shape: RoundedRectangleBorder(
@@ -80,6 +82,7 @@ class _SignUpBodyState extends State<SignUpBody> {
                       color: AppColors.primary500),
                 ),
               ),
+              Spacer(flex: 2),
             ],
           ),
           Padding(

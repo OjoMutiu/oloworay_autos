@@ -139,11 +139,12 @@ class _HomePageBodyState extends State<HomePageBody> {
                   physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    childAspectRatio: 0.72,
+                    childAspectRatio: 0.65 * 812/AppDimension.screenHeight,
                     mainAxisSpacing: AppDimension.height10
                   ),
                   itemCount: demoExploreCars.length,
                   itemBuilder: (context, index) {
+                    print('screen Height is ${AppDimension.screenHeight}');
                     return CarCad(
                       //wrapHeight: 74,
                       width: 157,

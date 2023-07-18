@@ -136,8 +136,8 @@ class ChatRoom extends StatelessWidget {
                 )),
             Padding(
               padding: EdgeInsets.only(
-                  left: AppDimension.width20,
-                  right: AppDimension.width24,
+                  left: AppDimension.width6,
+                  //right: AppDimension.width10,
                   top: AppDimension.height10,
                   bottom: AppDimension.height16),
               child: Container(
@@ -193,12 +193,17 @@ class ChatRoom extends StatelessWidget {
                     children: [
                       Expanded(
                         child: TextField(
+                          style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                            fontSize: AppDimension.font12,
+                            color: AppColors.black60,
+                          ),
                           controller: messageController.textEditingController,
                           focusNode: controller.focusNode,
                           decoration: InputDecoration(
                               hintText: 'Type your message',
                               hintStyle:
                               Theme.of(context).textTheme.labelSmall?.copyWith(
+                                fontSize: AppDimension.font12,
                                 color: AppColors.black60,
                               ),
                               enabledBorder: InputBorder.none,

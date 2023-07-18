@@ -42,9 +42,9 @@ class AvailableUsers extends StatelessWidget {
             itemBuilder: (context, index) {
               String lastUserMessage = '';
               if (controller.allMessagedUsers[index].lastMessage.length >
-                  AppDimension.getProportionateScreenWidth(25)) {
+                  AppDimension.getProportionateScreenWidth(24)) {
                 lastUserMessage =
-                    '${controller.allMessagedUsers[index].lastMessage.substring(0, AppDimension.getProportionateScreenWidth(28).toInt())}...';
+                    '${controller.allMessagedUsers[index].lastMessage.substring(0, AppDimension.getProportionateScreenWidth(24).toInt())}...';
               } else {
                 lastUserMessage =
                     controller.allMessagedUsers[index].lastMessage;
@@ -97,8 +97,7 @@ class AvailableUsers extends StatelessWidget {
                                               children: [
                                                 SvgPicture.asset(
                                                     'assets/icons/tick.svg'),
-                                                SizedBox(
-                                                    width: AppDimension.width4),
+                                                SizedBox(width: AppDimension.width4),
                                                 Text(
                                                   lastUserMessage,
                                                   style: Theme.of(context)
@@ -118,8 +117,7 @@ class AvailableUsers extends StatelessWidget {
                                                   .textTheme
                                                   .labelSmall
                                                   ?.copyWith(
-                                                      fontSize:
-                                                          AppDimension.font12,
+                                                      fontSize: AppDimension.font12,
                                                       color: AppColors.fade),
                                             )
                                     ],
@@ -143,7 +141,7 @@ class AvailableUsers extends StatelessWidget {
                                 ),
                                 const Text('')
                               ],
-                            )
+                            ),
                           ],
                         ),
                         Container(
