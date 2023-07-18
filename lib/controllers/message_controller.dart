@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../models/message_model.dart';
@@ -22,11 +23,26 @@ class MessageController extends GetxController{
   //Demo messages
   var userMessages = <Message>[].obs;
 
+  final FocusNode focusNode = FocusNode();
+
+  final TextEditingController _textEditingController = TextEditingController();
+
+  get textEditingController => _textEditingController;
+
   @override
   void onInit() {
     super.onInit();
     fetchAllMessagedUsers();
     fetchUserMessages();
+    focusNode.addListener(() {
+      update();
+    });
+  }
+
+  @override
+  void onClose() {
+    focusNode.dispose();
+    super.onClose();
   }
 
   void fetchAllMessagedUsers() async{
@@ -79,7 +95,7 @@ class MessageController extends GetxController{
   void fetchUserMessages() async{
     var userMessagesData = [
       Message(
-          textMessage: 'Hey Whatsup',
+          textMessage: 'Hey What, how are you today?',
           senderId: 'user1',
           senderUserName: 'sender1',
           receiverId: 'user2',
@@ -172,5 +188,22 @@ class MessageController extends GetxController{
     ].reversed.toList();
 
     userMessages.value = userMessagesData;
+  }
+
+  void onSubmitted(TextEditingController textEditingController){
+    final newMessage =
+        Message(
+            textMessage: textEditingController.text,
+            senderId: 'user1',
+            senderUserName: 'user1',
+            receiverId: '1',
+            timeStamp: DateTime.now(),
+            isSentByMe: true);
+
+    userMessages.insert(0, newMessage);
+
+    textEditingController.clear();
+
+    update();
   }
 }

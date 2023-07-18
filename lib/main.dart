@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:oloworay_autos/pages/app_home/home.dart';
+import 'package:oloworay_autos/pages/message/message.dart';
 
 import 'constants/app_routes.dart';
 import 'constants/theme/theme.dart';
@@ -21,10 +22,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       initialBinding: AllControllerBinding(),
-      //initialRoute: '/',
+      initialRoute: Routes.splashScreen,
       getPages: getPages,
       theme: AppTheme.lightTheme,
-      home: const MyHomeScreen(),
+      //home: const Messages(),
     );
   }
 }
