@@ -12,7 +12,7 @@ class OTP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
+    return Scaffold(
       appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
@@ -27,6 +27,6 @@ class OTP extends StatelessWidget {
           )
       ),
       body: OtpBody(),//const OtpBody(),
-    ));
+    );
   }
 }

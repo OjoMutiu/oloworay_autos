@@ -53,6 +53,12 @@ class _AppTextFieldState extends State<AppTextField> {
 
 
   @override
+  void dispose() {
+    super.dispose();
+    focusNode.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Column(
         children: [

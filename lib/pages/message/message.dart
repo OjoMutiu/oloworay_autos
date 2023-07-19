@@ -34,35 +34,33 @@ class _MessagesState extends State<Messages> {
       Get.find<MessageController>().isFirstVisit = false;
     }
 
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          centerTitle: true,
-          title: Center(
-            child: Text(
-              'Message',
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .titleLarge
-                  ?.copyWith(
-                  color: AppColors.text, fontSize: AppDimension.height16),
-            ),
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        centerTitle: true,
+        title: Center(
+          child: Text(
+            'Message',
+            style: Theme
+                .of(context)
+                .textTheme
+                .titleLarge
+                ?.copyWith(
+                color: AppColors.text, fontSize: AppDimension.height16),
           ),
-          backgroundColor: Colors.white,
         ),
-        body: const MessagesBody(),
+        backgroundColor: Colors.white,
+      ),
+      body: const MessagesBody(),
 
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: AppColors.primary500,
-          onPressed: () {
-            Get.toNamed(Routes.availableUsers);
-          },
-          child: Padding(
-            padding: EdgeInsets.all(AppDimension.height8),
-            child: const Icon(Icons.message_rounded, color: Colors.white,),
-          ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: AppColors.primary500,
+        onPressed: () {
+          Get.toNamed(Routes.availableUsers);
+        },
+        child: Padding(
+          padding: EdgeInsets.all(AppDimension.height8),
+          child: const Icon(Icons.message_rounded, color: Colors.white,),
         ),
       ),
     );

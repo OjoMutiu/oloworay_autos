@@ -24,11 +24,9 @@ class MyHomeScreen extends StatelessWidget {
 
     HomePageController controller = Get.find();
 
-    return SafeArea(
-      child: Scaffold(
-        body: Obx(() => pages[controller.currentIndex.value]),
-        bottomNavigationBar: buildHomeBottomNavBar(controller, context),
-      ),
+    return Scaffold(
+      body: Obx(() => pages[controller.currentIndex.value]),
+      bottomNavigationBar: buildHomeBottomNavBar(controller, context),
     );
   }
 }

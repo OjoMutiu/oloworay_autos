@@ -26,6 +26,7 @@ class _SignInFormState extends State<SignInForm> {
       children: [
             SizedBox(height: AppDimension.getProportionateScreenHeight(28)),
             AppTextField(
+              controller: controller.userEmailController,
               show: false,
               hintText: signUpEmail,
               svgIcon: emailIcon,

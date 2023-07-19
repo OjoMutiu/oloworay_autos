@@ -28,11 +28,11 @@ class PassWordFormError extends StatelessWidget {
           color: Colors.redAccent,
           size: AppDimension.getProportionateScreenHeight(11),
         ),
-        SizedBox(width: AppDimension.getProportionateScreenWidth(5) ,),
+        SizedBox(width: AppDimension.width4),
         Text(errorMessage, style: Theme.of(context).textTheme.labelMedium?.copyWith(
             color: AppColors.textBody
         ),),
-        SizedBox(width: AppDimension.getProportionateScreenWidth(10)),
+        SizedBox(width: AppDimension.width8),
       ],
     );
   }

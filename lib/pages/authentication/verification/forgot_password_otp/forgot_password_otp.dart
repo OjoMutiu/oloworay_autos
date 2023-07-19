@@ -12,7 +12,7 @@ class ForgotPasswordOTP extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Scaffold(
+    return Scaffold(
       appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
@@ -27,6 +27,6 @@ class ForgotPasswordOTP extends StatelessWidget {
           )
       ),
       body: const ForgotPasswordOtpBody(),//const OtpBody(),
-    ));
+    );
   }
 }

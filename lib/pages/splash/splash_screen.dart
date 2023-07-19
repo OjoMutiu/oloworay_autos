@@ -16,9 +16,9 @@ class MySplashscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child:
-      Scaffold(
-        body: Column(
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -32,7 +32,7 @@ class MySplashscreen extends StatelessWidget {
             const Spacer(flex: 1,),
           ],
         ),
-      )
+      ),
     );
   }
 }

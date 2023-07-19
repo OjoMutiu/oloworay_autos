@@ -30,8 +30,6 @@ class UserSignInFormController extends GetxController{
   //Instantiation of TextEditingControllers
   final TextEditingController userEmailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController cPasswordController = TextEditingController();
-
 
   //CheckBox
   void rememberCheckBox() => remember.value = !remember.value;

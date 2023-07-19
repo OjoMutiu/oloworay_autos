@@ -71,29 +71,30 @@ class _AppPhoneTextFieldState extends State<AppPhoneTextField> {
                     borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(6),
                         bottomLeft: Radius.circular(6))),
-                child: Row(
-                  children: [
-                    Container(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: AppDimension.height10),
-                        child: Obx(
-                          () => Text(
-                            userFormController.selectedCountryCode.value,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium
-                                ?.copyWith(color: AppColors.black100),
-                          ),
-                        )),
-                    GestureDetector(
-                        onTap: () async {
-                          userFormController.onTap();
-                        },
-                        child: Container(
-                            padding:
-                                EdgeInsets.only(right: AppDimension.height10),
-                            child: SvgPicture.asset(dropDownIcon))),
-                  ],
+                child: GestureDetector(
+                  onTap: () async {
+                    userFormController.onTap();
+                  },
+                  child: Row(
+                    children: [
+                      Container(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: AppDimension.height10),
+                          child: Obx(
+                            () => Text(
+                              userFormController.selectedCountryCode.value,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium
+                                  ?.copyWith(color: AppColors.black100),
+                            ),
+                          )),
+                      Container(
+                          padding:
+                              EdgeInsets.only(right: AppDimension.height10),
+                          child: SvgPicture.asset(dropDownIcon)),
+                    ],
+                  ),
                 ),
               ),
               Expanded(

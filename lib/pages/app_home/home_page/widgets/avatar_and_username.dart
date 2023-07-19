@@ -34,7 +34,7 @@ class UserHomePageProfile extends StatelessWidget {
                   //todo: add profile pics
                 },
                 child: CircleAvatar(
-                  radius: AppDimension.height24,
+                  radius: AppDimension.height20,
                   backgroundImage: AssetImage(userProfilePic),
                 ),
               ),

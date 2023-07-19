@@ -38,7 +38,7 @@ class _HomePageBodyState extends State<HomePageBody> {
                 horizontal: AppDimension.getProportionateScreenWidth(20)),
             child: Column(
               children: [
-                SizedBox(height: AppDimension.getProportionateScreenHeight(30)),
+                SizedBox(height: AppDimension.getProportionateScreenHeight(40)),
                 const UserHomePageProfile(),
                 SizedBox(height: AppDimension.height20),
               ],
@@ -144,7 +144,6 @@ class _HomePageBodyState extends State<HomePageBody> {
                   ),
                   itemCount: demoExploreCars.length,
                   itemBuilder: (context, index) {
-                    print('screen Height is ${AppDimension.screenHeight}');
                     return CarCad(
                       //wrapHeight: 74,
                       width: 157,

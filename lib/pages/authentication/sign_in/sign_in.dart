@@ -13,18 +13,17 @@ class SignInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-            appBar: AppBar(
-                elevation: 0,
-                backgroundColor: Colors.white,
-                leading: IconButton(
-                    onPressed: () {
-                      Get.back();
-                    },
-                    icon: SvgPicture.asset(backArrow, width: AppDimension.height20,
-                      height: AppDimension.height20,
-                    ))),
-            body: const SignInBody()));
+    return Scaffold(
+        appBar: AppBar(
+            elevation: 0,
+            backgroundColor: Colors.white,
+            leading: IconButton(
+                onPressed: () {
+                  Get.back();
+                },
+                icon: SvgPicture.asset(backArrow, width: AppDimension.height20,
+                  height: AppDimension.height20,
+                ))),
+        body: const SignInBody());
   }
 }
