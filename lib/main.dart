@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'constants/app_routes.dart';
 import 'constants/theme/theme.dart';
 import 'controllers/all_controller_binding.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+Future<void> main() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    // await initialRouteCondition();
+    SystemChrome.setPreferredOrientations(
+        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
+        .then((value) => runApp(const MyApp()));
 }
 
 class MyApp extends StatelessWidget {

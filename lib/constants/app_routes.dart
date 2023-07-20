@@ -16,7 +16,7 @@ import '../pages/splash/splash_screen.dart';
 
 class Routes {
   static String onBoardingPage = '/onBoardingPage';
-  static String splashScreen = '/';
+  static String splashScreen = '/splash';
 
   static String signUpPage = '/signUpPage';
   static String signInPage = '/signInPage';
