@@ -76,7 +76,7 @@ class _AppTextFieldState extends State<AppTextField> {
                       onChanged: widget.onChanged,
                       keyboardType: widget.textInputType,
                       cursorColor: AppColors.black24,
-                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: AppColors.black80,
                             fontSize: AppDimension.font14,
                           ),
@@ -113,6 +113,10 @@ class _AppTextFieldState extends State<AppTextField> {
                     onChanged: widget.onChanged,
                     keyboardType: TextInputType.visiblePassword,
                     cursorColor: AppColors.black24,
+                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: AppColors.black80,
+                      fontSize: AppDimension.font14,
+                    ),
                     decoration: InputDecoration(
                       hintText: widget.hintText,
                       hintStyle:

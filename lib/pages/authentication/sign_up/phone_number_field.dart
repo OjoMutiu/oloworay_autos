@@ -105,7 +105,7 @@ class _AppPhoneTextFieldState extends State<AppPhoneTextField> {
                   onChanged: widget.onChanged,
                   keyboardType: widget.textInputType,
                   cursorColor: Colors.black87,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  style: Theme.of(context).textTheme.bodySmall?.copyWith(
                         color: AppColors.black80,
                         fontSize: AppDimension.font14,
                       ),
