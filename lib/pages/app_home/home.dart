@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:oloworay_autos/pages/app_home/widget/bottom_nav.dart';
+import 'package:oloworay_autos/pages/sell/sell.dart';
 
 
 import '../../controllers/main_homepage_controller.dart';
@@ -17,7 +18,7 @@ class MyHomeScreen extends StatelessWidget {
     final List<Widget> pages = [
       const HomePageBody(),
       const Messages(),
-      Container(color: Colors.yellow),
+      const SellPage(),
       Container(color: Colors.red),
       Container(color: Colors.green),
     ];

@@ -200,7 +200,9 @@ class MessageController extends GetxController{
             timeStamp: DateTime.now(),
             isSentByMe: true);
 
-    userMessages.insert(0, newMessage);
+    if(newMessage.textMessage.isNotEmpty) {
+      userMessages.insert(0, newMessage);
+    }
 
     textEditingController.clear();
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:intl/intl.dart';
 import 'package:oloworay_autos/constants/app_colors.dart';
 import 'package:oloworay_autos/controllers/message_controller.dart';
 
@@ -14,6 +15,7 @@ class ChatRoom extends StatelessWidget {
   Widget build(BuildContext context) {
     MessageController messageController = Get.find();
     return Scaffold(
+      //AppBar
       appBar: AppBar(
         elevation: 0,
         titleSpacing: 0,
@@ -26,6 +28,8 @@ class ChatRoom extends StatelessWidget {
               width: AppDimension.height20,
               height: AppDimension.height20,
             )),
+
+        //Title
         title: Container(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -51,19 +55,93 @@ class ChatRoom extends StatelessWidget {
             ],
           ),
         ),
+
+        //Call icon button
         actions: [
           Padding(
             padding: EdgeInsets.only(right: AppDimension.width20),
             child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+
+                  //Bottom sheet set up
+
+                  showModalBottomSheet(
+                    backgroundColor: Colors.transparent,
+                      context: context,
+                      builder: (context){
+                        return Padding(
+                          padding: EdgeInsets.only(bottom: AppDimension.height52),
+                          child: Container(
+                           // height: AppDimension.getProportionateScreenHeight(170),
+                            color: Colors.transparent,
+                            child: Column(
+                              children: [
+                                Spacer(),
+                                Container(
+                                  margin: EdgeInsets.only(bottom: AppDimension.height4),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(AppDimension.height6)
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsets.only(top: AppDimension.height20, bottom: AppDimension.height12),
+                                        child: Text('Call', style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                                          fontSize: AppDimension.font12,
+                                          color: AppColors.text
+                                        ),),
+                                      ),
+                                      Divider(
+                                        thickness: AppDimension.getProportionateScreenHeight(0.5),
+                                        color: AppColors.neutral500,
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.only(top: AppDimension.height12, bottom: AppDimension.height12+1),
+                                        child: Text('+234 8168051247', style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                          fontSize: AppDimension.font16,
+                                          color: AppColors.black100
+                                        ),),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  width: double.maxFinite,
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(AppDimension.height6)
+                                  ),
+                                  child: TextButton(
+                                    onPressed: (){
+                                      Get.back();
+                                    },
+                                    child: Padding(
+                                      padding: EdgeInsets.symmetric(vertical: AppDimension.height15),
+                                      child: Text('Cancel',style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                        fontSize: AppDimension.font16,
+                                        color: AppColors.text,
+                                      ), ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      });
+                },
                 icon: SvgPicture.asset('assets/icons/callout_handset.svg')),
           )
         ],
         backgroundColor: Colors.white,
       ),
+
+      //Body of chat room
       body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            //Car, car model, and car price
             Container(
               height: AppDimension.getProportionateScreenHeight(80),
               margin: EdgeInsets.only(bottom: AppDimension.height12),
@@ -93,12 +171,15 @@ class ChatRoom extends StatelessWidget {
               ),
             ),
             SizedBox(height: AppDimension.height10),
+
+            //Messages
             Expanded(
                 child: Obx(
                   () =>  ListView.builder(
                     reverse: true,
                     itemCount: messageController.userMessages.length,
                     itemBuilder: (BuildContext context, int index) {
+                      String date = DateFormat.Hm().format(messageController.userMessages[index].timeStamp);
                       return Padding(
                         padding: EdgeInsets.only(
                             left: AppDimension.width20,
@@ -111,8 +192,7 @@ class ChatRoom extends StatelessWidget {
                               : Alignment.centerLeft,
                           child: Container(
                             constraints: BoxConstraints(
-                                maxWidth:
-                                    AppDimension.getProportionateScreenWidth(213)),
+                                maxWidth: AppDimension.getProportionateScreenWidth(280)),
                             padding: EdgeInsets.symmetric(
                                 horizontal: AppDimension.width12,
                                 vertical: AppDimension.height8),
@@ -122,11 +202,15 @@ class ChatRoom extends StatelessWidget {
                                     : AppColors.neutral300,
                                 borderRadius:
                                     BorderRadius.circular(AppDimension.height6)),
-                            child: Text(
-                              messageController.userMessages[index].textMessage,
-                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                  color: AppColors.black100,
-                                  fontSize: AppDimension.font14),
+                            child: Container(
+                              constraints: BoxConstraints(
+                                  maxWidth: AppDimension.getProportionateScreenWidth(213)),
+                              child: Text(
+                                messageController.userMessages[index].textMessage,
+                                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                    color: AppColors.black100,
+                                    fontSize: AppDimension.font14),
+                              ),
                             ),
                       ),
                     ),
@@ -134,6 +218,8 @@ class ChatRoom extends StatelessWidget {
               },
             ),
                 )),
+
+            //Warning
             Padding(
               padding: EdgeInsets.only(
                   left: AppDimension.width6,
@@ -174,6 +260,8 @@ class ChatRoom extends StatelessWidget {
                 ),
               ),
             ),
+
+            //New Message textField
             Container(
               padding: EdgeInsets.only(
                   left: AppDimension.width20,
@@ -232,3 +320,23 @@ class ChatRoom extends StatelessWidget {
     );
   }
 }
+
+// Text(
+//   date,
+//   style: Theme.of(context).textTheme.labelSmall?.copyWith(
+//       color: AppColors.black100,
+//       fontSize: AppDimension.font10),
+// ),
+
+// Container(
+// alignment: Alignment.bottomRight,
+// child: Text(
+// date,
+// textAlign: TextAlign.right,
+// style: Theme.of(context).textTheme.labelSmall?.copyWith(
+// color: AppColors.black100,
+// fontSize: AppDimension.font10),
+// ),
+// ),
+// if(messageController.userMessages[index].isSentByMe)
+// SvgPicture.asset('assets/icons/tick.svg')
